@@ -1,0 +1,22 @@
+class Solution {
+    public double average(int[] salary) {
+        Arrays.sort(salary);
+        int n=salary.length;
+        double ans=salary[1];
+        //int min=salary[0],max= salary[salary.length-1];
+        //int count=0;
+
+        for(int i =2;i<salary.length-1;i++){
+            /*if(salary[i]!=min || salary[i]!=max){
+                ans+=(double)salary[i];
+                count++;
+            }*/
+            ans+=salary[i];
+            
+        }  
+        //double finalAns=(double)ans/count;
+        return ans/(n-2);
+    
+
+    }
+}
